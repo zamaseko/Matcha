@@ -1,0 +1,20 @@
+<%- include ('partials/header') %>
+<img src='/uploads/<%=match.username%>' width="200" height="200">
+<div>
+<button class="block" id="<%=match.username%>"> <% if (adminToken) {%> suspend <% } else {%> block <% } %> </button>
+<button class="like" id="<%=match.username%>">like</button>
+</div>
+=======
+<p id="noti"></p>
+<p class="list-group-item"><%= match.username %></p>
+<p class="list-group-item"><%= match.popularity %>/10 rating</p>
+<p class="list-group-item"><%= match.age %> years old</p>
+<p class="list-group-item"><%= match.gender %></p>
+<!-- <p class="list-group-item"><%= match.orientation %></p> -->
+<p class="list-group-item">prefers <%= match.preference %></p>
+<p class="list-group-item">likes: <%= match.interests %></p>
+<p class="list-group-item">from <%= match.city %>, <%= match.country %></p>
+<p class="list-group-item">"<%= match.bio %>"</p>
+<script src="/js/like.js"></script>
+<script src="/js/block.js"></script>
+<%- include ('partials/footer') %>

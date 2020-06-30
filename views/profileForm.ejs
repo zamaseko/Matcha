@@ -1,0 +1,41 @@
+<%- include ('partials/header') %>
+<form action="/p" method="post">
+	<label for="age">age</label><br>
+	<input type="text" id="age" name="age" required value="<%= age %>"></p>		
+	
+	<label for="gender">gender</label><br>
+	<input type="radio" id="male" name="gender" value="male" 
+	<%if(gender=="male"){%>checked<%}%>>
+	<label for="male">male</label>
+	<input type="radio" id="female" name="gender" value="female" 
+	<%if(gender=="female"){%>checked<%}%>>
+	<label for="female">female</label><br>
+	
+	<label for="preference">preference</label><br>
+	<input type="radio" id="men" name="preference" value="men"
+	<%if(preference=="men"){%>checked<%}%>>
+	<label for="men">men</label>
+	<input type="radio" id="women" name="preference" value="women"
+	<%if(preference=="women"){%>checked<%}%>>
+	<label for="women">women</label>
+	<input type="radio" id="both" name="preference" value="both"
+	<%if(preference=="both"){%>checked<%}%>>
+	<label for="both">both</label><br>
+
+	<label for="interests">interests</label><br>
+	<input type="text" id="interests" name="interests" required value="<%= interests%>"></p>
+
+	<label for="city">city</label><br>
+	<input type="text" id="city" name="city" maxlength="42" required value="<%= city%>"></p>	
+	<label for="country">country</label><br>
+	<input type="text" id="country" name="country" maxlength="42" required value="<%= country%>"></p>
+
+	<label for="bio">bio</label><br>
+	<textarea id="bio" name="bio" rows="4" cols="23"><%= bio%></textarea><br>
+
+	<label for="password">password</label><br>
+	<input type="password" id="password" name="password" required></p>
+	<input type="submit" value="submit">
+</form><br>
+
+<%- include ('partials/footer') %>

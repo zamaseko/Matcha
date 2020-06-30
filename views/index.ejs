@@ -1,0 +1,11 @@
+<%- include ('partials/header') %>
+<% if (suggestions) { for (let i in suggestions) { if (suggestions[i].blocked === 0 && suggestions[i].suspended === 0 && suggestions[i].suitable === 1) {%>
+	<a href='/p/<%=suggestions[i].username%>'>
+		<li class="list-group-item">
+			<div><%=suggestions[i].username%> - <%=suggestions[i].gender%></div>
+			<div><%=suggestions[i].city%> ( <%=suggestions[i].distance%> km )</div>
+		</li>
+	</a>
+<%}}}%>
+<%- include ('partials/footer') %>
+

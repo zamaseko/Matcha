@@ -1,0 +1,56 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f6e9;
+}
+
+*{
+	box-sizing: border-box;
+}
+/*--- navigation bar ---*/
+.navbar {
+  background-color: white;
+}
+.nav-link,
+.navbar-brand {
+  color: black;
+  cursor: pointer;
+}
+.nav-link {
+  margin-right: 1em !important;
+}
+.nav-link:hover {
+  color:; 
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+#brand{
+
+  font-size: 35px;
+  font-style: oblique;
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+body {
+    text-align: center;
+    background-color: #FF6347;
+}
+
+footer{
+	font-style: italic;
+}
+.logo{
+	max-width: 55%;
+	height: 2em;
+	margin-left: 0;
+}
+/*
+.the-form {
+    display: inline-block;
+}*/

@@ -1,0 +1,6 @@
+extends layout
+
+block content
+	ul.list-group
+		each user in users
+			li.list-group-item= user.id + " " + user.username + " " + user.email

@@ -1,0 +1,51 @@
+A) Configuring webapp
+---------------------
+1. install python3
+2. pip install Flask
+3. python3 -m venv env
+4. install python3-virtualenv
+5. virtualenv env
+6. source env/bin/activate
+7. pip install Flask
+8. mkdir app
+9. vim app/__init.py 
+		from flask import Flask
+
+		app = Flask(__name__)
+
+		from app import routes
+10. vim app/routes.py 
+		from app import app
+
+		@app.route('/')
+		@app.route('/index')
+		def index():
+			return "hello world!"
+11. vim matcha.py
+		from app import app
+12. export FLASK_APP=matcha.py
+	export FLASK_DEBUG=1 
+13. flask run (open localhost:5000 in browser)
+14. pip install python-dotenv
+15. vim .flaskenv
+		FLASK_APP=matcha.py
+		FLASK_DEBUG=1 (0 at launch)
+
+B) Creating templates
+---------------------
+1. mkdir app/templates
+2. vim app/templates/index.html
+		<html>
+			<head>
+				<title> {{ title }}</title>
+			</head>
+			<body>
+				<h1>hello {{user.username}}
+			</body>
+		</html>
+3. vim app/routes.py (add)
+		from flask import render_template
+
+		def index():
+			user = {'username': 'Michael'}
+			return render_template('index.html', title='Home', user=user)

@@ -1,0 +1,5 @@
+<%- include ('partials/header') %>
+<% for (let i in likes) {%>
+	<a href='/p/<%=likes[i].username%>'><li class="list-group-item"><%=likes[i].username%></li></a>
+<%}%>
+<%- include ('partials/footer') %>
